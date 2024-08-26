@@ -1,0 +1,83 @@
+brouillon :
+
+
+CSS :
+   <!-- METEO  -->
+        <div id="meteo">
+            <!-- <h2>MÉTÉO</h2> -->
+            <!-- <div id="input">
+                <input type="text" id="inputCity" placeholder="Entrez la ville">
+                <button type="submit">Rechercher</button>
+            </div>
+
+            <div id="box-container">
+                <h4 id="city" class="box"></h4>
+                <img id="icon" src="" alt="Météo Icon" width="30px">
+                <div id="description" class="box"></div>
+                <div id="temp" class="box"></div>
+                <div id="humidity" class="box"></div>
+                <div id="wind" class="box"><img src="vent.png" width="20px"></div>
+            </div>
+        </div> -->
+ 
+
+ function getWeather() {
+    const apiKey = "b55dfa54110a93914b958f68f3716bd7";
+
+    const city = document.getElementById('city').value;
+
+    if (!city) {
+        alert('Veuillez entrez une ville');
+        return;
+    }
+
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=fr&appid=${apiKey}`;
+
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=fr&appid=¨${apiKey}`;
+
+fetch (currentWeatherUrl)
+.then (response => response.json())
+.then(data => {
+    displayWheather(data);
+})
+.catch(error => {
+    console.error('Error fetching current weather data', error);
+})
+
+f
+
+}
+
+Exemple pour la météo d'une ville spécifique : 
+
+
+HTML :
+ <div id="box-container">
+                <div id="city" class="box"></div>
+                <div id="temp" class="box"></div>
+                <div id="humidity" class="box"></div>
+                <div id="wind" class="box"><img src="vent.png" width="20px"></div>
+            </div>
+
+
+JS
+const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&lang=fr&appid=b55dfa54110a93914b958f68f3716bd7`;
+
+
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        document.querySelector('#city').innerHTML = data.name;
+        document.querySelector('#temp').innerHTML = data.main.temp + ' °';
+        document.querySelector('#humidity').innerHTML = data.main.humidity + ' %';
+        document.querySelector('#wind').innerHTML = data.wind.speed + ' km/h';
+    })
+    .catch(err => console.log('Erreur : ' + err));
+
+API :
+https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid=${b55dfa54110a93914b958f68f3716bd7}
+
+http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
+
+
