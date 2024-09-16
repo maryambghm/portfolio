@@ -17,9 +17,9 @@ let apiCall = function (city) {
             document.querySelector('#temp-min').innerHTML = `${Math.round(data.main.temp_min)} °C`;
             document.querySelector('#icon').src = iconUrl;
             document.querySelector('#description').innerHTML = data.weather[0].description;
-            document.querySelector('#temp').innerHTML = `<img src="celsius.png" alt="icone degré celsius">${Math.round(data.main.temp)}°C`;
-            document.querySelector('#humidity').innerHTML = `<img src="humidite.png" alt="icone humidité">${data.main.humidity}%`;
-            document.querySelector('#wind').innerHTML = ` <img src="vent.png" alt="icone vent">${Math.round(data.wind.speed)}km/h`;
+            document.querySelector('#temp').innerHTML = `<img src="src/img/meteo/celsius.png" alt="icone degré celsius">${Math.round(data.main.temp)}°C`;
+            document.querySelector('#humidity').innerHTML = `<img src="src/img/meteo/humidite.png" alt="icone humidité">${data.main.humidity}%`;
+            document.querySelector('#wind').innerHTML = ` <img src="src/img/meteo/vent.png" alt="icone vent">${Math.round(data.wind.speed)}km/h`;
         })
         .catch(err => console.log('Erreur : ' + err));
 

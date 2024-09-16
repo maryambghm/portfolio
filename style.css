@@ -65,8 +65,9 @@ header {
 
 /* NAVIGATION */
 
-#sort {
+#menu-burger {
     display: none;
+
 }
 
 nav {
@@ -485,11 +486,12 @@ footer {
     right: 55px;
 }
 
-#scroll-top img{
+#scroll-top img {
     transform-origin: transform 0.3s ease;
     scroll-behavior: smooth;
 
 }
+
 #scroll-top img :hover {
     transition: scale(1.1);
     scroll-behavior: smooth;
@@ -523,7 +525,7 @@ footer {
     }
 
     #weather-details .box {
-        font-size: 8px;
+        font-size: 11px;
         /* Réduit la taille de la police des boîtes */
         padding: 2px;
         /* Réduit le padding à l'intérieur des boîtes */
@@ -550,8 +552,8 @@ footer {
     #temp-min.box {
         font-size: small;
     }
-    
-    
+
+
 }
 
 
@@ -567,9 +569,10 @@ footer {
 
     /* En-tête et navigation */
     header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         text-align: center;
+        gap: 20px;
     }
 
     nav ul {
@@ -578,12 +581,50 @@ footer {
         gap: 20px;
         padding: 10px;
         margin: 0;
+        margin-right: 120px;
     }
 
     nav a {
         padding: 8px;
         font-size: larger;
     }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu-burger {
+        display: block;
+        z-index: 1000;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+    }
+
+    #sort {
+        display: block;
+        width: 70px;
+        height: auto;
+        transform: rotateY(180deg);
+        border: 1px solid transparent;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+    }
+    
+
+#sort:hover {
+    background-color: white;
+    /* Une teinte plus foncée de la couleur de base */
+
+}
+
+  
 
     /* Météo */
 
@@ -714,6 +755,7 @@ footer {
         justify-content: center;
         margin-top: 10px;
     }
+
     #scroll-top {
         right: 25px;
     }

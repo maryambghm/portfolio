@@ -1,0 +1,66 @@
+/* Style général pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(105, 35, 35, 0.367);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style pour le conteneur principal */
+main {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid white;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+h1,h2,p,ul,li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    color: black ;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.comment{
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.comment h4{
+    font-size: small;
+}
+
+ .comment li{
+    margin: auto;
+    padding-top: 10px ;
+    font-size: 12px;
+    font-style: italic;
+    max-width: 400px;
+
+}
+
+.comment ul {
+    display: flex;
+    flex-direction: column;
+}
