@@ -30,7 +30,7 @@ main {
 }
 
 main p,
-#competences li,
+#hardskills li,
 #meteo-card,
 #intro {
     font-family: Gothic Light, fantasy;
@@ -280,36 +280,7 @@ nav a:hover {
     line-height: 1.6
 }
 
-/* COMPETENCES : */
-#competences {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 5px;
 
-}
-
-#competences ul {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    gap: 45px;
-    padding: 5px 10px;
-    margin-bottom: 15px;
-}
-
-#competences li {
-    border-radius: 10px;
-    /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Ombre portée */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0;
-    align-items: center;
-}
 
 /* PROJETS  */
 #project,
@@ -323,11 +294,13 @@ nav a:hover {
 }
 
 #project_content {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     padding: 0 30px;
     align-items: center;
     text-align: center;
+    gap: 45px;
+
 }
 
 #project_content p {
@@ -350,6 +323,11 @@ nav a:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 
+}
+
+.line {
+    display: flex;
+    align-items: center;
 }
 
 .p-link {
@@ -385,6 +363,42 @@ nav a:hover {
     /* Limite la largeur du conteneur */
 }
 
+/* HARD SKILLS : */
+#hardskills {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+#hardskills ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 45px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+
+#hardskills li {
+    border-radius: 10px;
+    /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre portée */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    align-items: center;
+}
+
+.hardskills-line {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
 
 /* FORMATION */
 
@@ -477,6 +491,7 @@ footer {
     color: #333;
     font-family: 'Gothic Light', fantasy;
     font-size: 14px;
+    margin-right: 15px;
 
 }
 
@@ -616,15 +631,15 @@ footer {
         transition: background-color 0.3s;
         border-radius: 5px;
     }
-    
 
-#sort:hover {
-    background-color: white;
-    /* Une teinte plus foncée de la couleur de base */
 
-}
+    #sort:hover {
+        background-color: white;
+        /* Une teinte plus foncée de la couleur de base */
 
-  
+    }
+
+
 
     /* Météo */
 
