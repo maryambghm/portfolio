@@ -34,4 +34,4 @@ document.querySelector('#input button').addEventListener('click', function () {
 });
 
 // Appel par défaut au chargement de la page 
-apiCall('Beauvais');
+apiCall('Lille');
