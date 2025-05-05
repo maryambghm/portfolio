@@ -743,9 +743,20 @@ footer {
     /* Projets */
 
     .project_container {
+        max-width: 320px;
+     }
+    .agora-community .project_container {
+        padding: auto;
+    }
+    .agora-community {
+        padding-bottom: 20px;
         max-width: 100%;
     }
+    .agora-community .p-link {
+        padding: auto;
+    } */
 
+    .projet
     #project_content p {
         font-size: medium;
     }
@@ -760,9 +771,12 @@ footer {
         width: 100%;
     }
 
-
-
-
+/* Hardskills  */
+    .hardskills-line {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
     /* Formation */
     #form-content {
         flex-direction: column;
@@ -773,7 +787,7 @@ footer {
 
     .form-div {
         margin: 20px 0;
-        max-width: 100%;
+        max-width: 250px;
 
     }
 
