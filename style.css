@@ -318,6 +318,8 @@ nav a:hover {
     max-width: 400px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     max-height: 600px;
+    min-height: 580px;
+    min-width: 300px;
 
     /* Limite la largeur du conteneur */
 }
@@ -744,7 +746,8 @@ footer {
 
     .project_container {
         max-width: 320px;
-     }
+    }
+        /* 
     .agora-community .project_container {
         padding: auto;
     }
