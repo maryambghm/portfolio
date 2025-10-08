@@ -33,7 +33,8 @@ main {
 main p,
 #hardskills li,
 #meteo-card,
-#intro {
+#intro,
+#cv {
     font-family: "Teko", fantasy;
     padding: 10px;
     border-radius: 10px;
@@ -245,12 +246,18 @@ nav a:hover {
 
 #intro-contact {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 50%;
+}
+
+#line1 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 /* PRESENTATION  */
@@ -280,7 +287,6 @@ nav a:hover {
 .content p {
     line-height: 1.6
 }
-
 
 
 /* PROJETS  */
@@ -315,11 +321,11 @@ nav a:hover {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    min-width: 300px;
     max-width: 400px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     max-height: 600px;
     min-height: 580px;
-    min-width: 300px;
 
     /* Limite la largeur du conteneur */
 }
@@ -443,7 +449,7 @@ nav a:hover {
 #year {
     font-size: 40px;
     color: black;
-    font-family:  "Teko", fantasy;
+    font-family: "Teko", fantasy;
 }
 
 #loading {
@@ -589,7 +595,13 @@ footer {
         max-width: 100%;
     }
 
+    /* Section Formation  */
+    .form-div {
+        margin: 20px 0;
+        max-width: 200px;
+        padding: 10px 0px;
 
+    }
 }
 
 
@@ -747,7 +759,8 @@ footer {
     .project_container {
         max-width: 320px;
     }
-        /* 
+
+    /* 
     .agora-community .project_container {
         padding: auto;
     }
@@ -759,8 +772,7 @@ footer {
         padding: auto;
     } */
 
-    .projet
-    #project_content p {
+    .projet #project_content p {
         font-size: medium;
     }
 
@@ -774,12 +786,13 @@ footer {
         width: 100%;
     }
 
-/* Hardskills  */
+    /* Hardskills  */
     .hardskills-line {
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
+
     /* Formation */
     #form-content {
         flex-direction: column;
