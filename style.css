@@ -418,7 +418,6 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    max-width: 800px;
     margin: 0 auto;
     /* Centrer le contenu de la section */
     align-items: center;
@@ -434,7 +433,7 @@ nav a:hover {
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Ajout de transition pour l'effet hover */
-    max-width: 400px;
+    max-width: 250px;
     max-height: 200px;
     padding: 5px;
 }
@@ -463,7 +462,7 @@ nav a:hover {
 }
 
 /* EXPERIENCES  */
-#experiences {
+/* #experiences {
     display: flex;
     flex-direction: column;
 }
@@ -471,7 +470,50 @@ nav a:hover {
 #ex-coming {
     display: flex;
     justify-content: center;
+} */
+
+#experiences {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+#experiences h4 {
+    color: #2e2e2e;
+    font-weight: lighter;
+    margin-bottom: 14px;
+    margin-left: 8px;
+
+}
+
+
+.exp-content {
+    font-family: "Teko", fantasy;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px;
+}
+
+.exp-card {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 9px;
+   
+
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+
+.exp-card li {
+    margin: 2px;
+}
+
+/* 
+.exp-card:hover {
+    transform: scale(1.1);
+} */
 
 /* FOOTER  */
 footer {
@@ -606,6 +648,12 @@ footer {
         max-width: 200px;
         padding: 10px 0px;
 
+    }
+
+
+    /* Experience  */
+    .exp-content {
+        font-size: large;
     }
 }
 
@@ -836,5 +884,10 @@ footer {
 
     #scroll-top {
         right: 25px;
+    }
+
+    /* Experience  */
+    .exp-content {
+        font-size: small;
     }
 }
